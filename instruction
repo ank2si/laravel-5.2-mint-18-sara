@@ -1,0 +1,46 @@
+// basic stuff install(optional)
+sudo apt-get install git
+sudo apt-get install unzip
+
+//if you don't have php preinstalled usually ubuntu system comes with php and python repository, for installing php use command
+sudo apt-get install php
+
+/// LAMP 
+sudo apt-get install tasksel
+sudo tasksel install lamp-server
+
+// now we have to install composer
+curl -sS https://getcomposer.org/installer composer.phar
+
+//Now first 
+mv composer.phar composer
+
+//and then
+mv composer /usr/local/bin/
+
+//u can check your composer file just  by typing
+composer
+
+//install phpmyadmin
+sudo apt-get install phpmyadmin 
+
+#IF you get any error go to the http://localhost/phpmyadmin: You will need to configure apache2.conf to work with Phpmyadmin.
+$ sudo gedit /etc/apache2/apache2.conf
+
+#Include the following line at the bottom of the file, save and quit.
+
+$ Include /etc/phpmyadmin/apache.conf
+
+#Then, try to acccess localhost/phpmyadmin again
+
+// Creating laravel project 
+ sudo composer create-project --prefer-dist laravel/laravel <youprojectname> 5.2.29   # you can also use latest version if available instead of 5.2
+ sudo chmod -R 777 <yourprojectname>
+ 
+ You can go directly to localhost/yourprojecname/public to check whether its working or not
+ 
+ 
+ 
+
+ 
+
